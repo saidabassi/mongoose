@@ -58,7 +58,7 @@ router.delete('/delete/:_id', async (req, res) => {
     }
 })
 // find contact and update
-router.put('/edit/:_id', async (res, req) => {
+router.put('/edit/:_id', async (req, res) => {
     try {
         const { _id } = req.params;
         await Contact.updateOne({ _id },{$set:{...req.body}});
